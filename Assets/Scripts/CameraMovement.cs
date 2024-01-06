@@ -1,15 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class CameraMovement : MonoBehaviour
 {
-    [SerializeField] private Transform _cameraActiveZone;
     [SerializeField] private float _movementSpeed;
-    [SerializeField] private Camera _cam;
-    [SerializeField] private Transform _camHolder;
-    [SerializeField] private Transform _currentCamOrientation;
+    [SerializeField] private Transform _centerPoint;
 
     private Vector3 _rawDirection;
     private float _currentX;
@@ -27,10 +22,8 @@ public class CameraMovement : MonoBehaviour
         _rawDirection.x += _currentX;
         _rawDirection.z += _currentZ;
 
-        _cameraActiveZone.transform.position += _rawDirection * _movementSpeed * Time.deltaTime;
-        
-        Vector3 finalDirection = _currentCamOrientation.transform.forward * _rawDirection.z + _currentCamOrientation.transform.right * _rawDirection.x;
-        _camHolder.transform.position += finalDirection * _movementSpeed * Time.deltaTime;
+        Vector3 finalDirection = _centerPoint.transform.forward * _rawDirection.z + _centerPoint.transform.right * _rawDirection.x;
+        _centerPoint.transform.position += finalDirection * _movementSpeed * Time.deltaTime;
 
         _rawDirection = Vector3.zero;
     }
@@ -81,5 +74,10 @@ public class CameraMovement : MonoBehaviour
         {
             _currentX = 0;
         }
+    }
+
+    public bool IsIdle()
+    {
+        return _currentZ == 0 && _currentX == 0;
     }
 }

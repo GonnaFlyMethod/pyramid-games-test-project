@@ -19,6 +19,7 @@ public class CameraRotation : MonoBehaviour
     private CamPosition _camNewPos;
 
     private float _yRotation = 0;
+    private bool _isRotating = false;
 
     // Start is called before the first frame update
     private void Start()
@@ -31,8 +32,6 @@ public class CameraRotation : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_yRotation);
-
         if (_camCurrentPos != _camNewPos)
         {
             Quaternion quaternionRotation = new Quaternion();
@@ -45,6 +44,7 @@ public class CameraRotation : MonoBehaviour
             {
                 _centerPoint.transform.rotation = quaternionRotation;
                 _camCurrentPos = _camNewPos;
+                _isRotating = false;
 
                 if (_camCurrentPos == CamPosition.Buttom)
                 {
@@ -58,6 +58,7 @@ public class CameraRotation : MonoBehaviour
     {
         if (_camCurrentPos == _camNewPos)
         {
+            _isRotating = true;
             SetAppropriateCamPos(RotationDirection.Left);
         }
     }
@@ -66,6 +67,7 @@ public class CameraRotation : MonoBehaviour
     {
         if (_camCurrentPos == _camNewPos)
         {
+            _isRotating = true;
             SetAppropriateCamPos(RotationDirection.Right);
         }
     }
@@ -131,5 +133,10 @@ public class CameraRotation : MonoBehaviour
             _camNewPos = CamPosition.Buttom;
             return;
         }
+    }
+
+    public bool isRotating()
+    {
+        return _isRotating;
     }
 }
