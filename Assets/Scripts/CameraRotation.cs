@@ -14,6 +14,7 @@ enum RotationDirection
 
 public class CameraRotation : MonoBehaviour
 {
+    [SerializeField] private Transform _camHolder;
     [SerializeField] private Camera _cam;
 
     // Elements go in clock-wise order:
@@ -42,8 +43,6 @@ public class CameraRotation : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(_camCurrentPos);
-
         if (_camCurrentPos != _camNewPos)
         {
             Vector3 targetPos = _possibleCameraPositions[(int)_camNewPos].transform.position;
@@ -64,6 +63,7 @@ public class CameraRotation : MonoBehaviour
     {
         _cam.transform.rotation = Quaternion.LookRotation(
                 _focusPointDuringRotation.position - _cam.transform.position, Vector3.up);
+  
     }
 
     public void RotateCameraLeft()
