@@ -32,14 +32,20 @@ public class CameraMouseClickHandler : MonoBehaviour
             {
                 if (hit.collider != null)
                 {
+                    GameObject go = hit.collider.gameObject;
+
                     switch (hit.collider.tag){
                         case Global.Constants.Tags.chest:
-                            _chestClickHandler.HandleClick();
+                            ChestClickHandler clickHandler = go.GetComponent<ChestClickHandler>();
+                            
+                            clickHandler?.HandleClick();
+                            break;
+                        case Global.Constants.Tags.key:
+                            KeyClickHandler keyClickHandler = go.GetComponent<KeyClickHandler>();
+
+                            keyClickHandler?.HandleClick();
                             break;
                     }
-
-
-                    Debug.Log(hit.collider.gameObject.name);
                 }
             }
         }

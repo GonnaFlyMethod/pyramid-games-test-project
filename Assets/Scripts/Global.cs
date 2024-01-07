@@ -5,6 +5,7 @@ namespace Global
         public class Tags
         {
             public const string chest = "Chest";
+            public const string key = "Key";
         }
 
         public class ChestAnimator
