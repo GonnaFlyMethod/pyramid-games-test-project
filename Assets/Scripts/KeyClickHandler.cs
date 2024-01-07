@@ -1,10 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class KeyClickHandler : MonoBehaviour
 {
     GameObject parentGO;
+
+    private bool keyCollected = false;
     
     // Start is called before the first frame update
     void Start()
@@ -20,7 +20,7 @@ public class KeyClickHandler : MonoBehaviour
 
     public void HandleClick()
     {
-        Debug.Log("Handling click for key");
-        Destroy(parentGO);
+        keyCollected = true;
+        parentGO.SetActive(false);
     }
 }
