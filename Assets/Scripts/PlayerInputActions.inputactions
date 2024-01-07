@@ -12,7 +12,7 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": true
+                    "initialStateCheck": false
                 },
                 {
                     "name": "RotateCameraRight",
@@ -54,6 +54,15 @@
                     "name": "MoveRight",
                     "type": "Button",
                     "id": "a88ae008-6fa2-4c16-8eb6-7ed169204843",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MouseLeftClick",
+                    "type": "Button",
+                    "id": "d3f13480-3668-4800-be3b-a7458242de30",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -124,6 +133,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "MoveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cd83583d-e4c6-4c52-97e8-d9f4087eee97",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MouseLeftClick",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
