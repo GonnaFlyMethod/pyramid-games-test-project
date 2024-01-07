@@ -75,9 +75,4 @@ public class CameraMovement : MonoBehaviour
             _currentX = 0;
         }
     }
-
-    public bool IsIdle()
-    {
-        return _currentZ == 0 && _currentX == 0;
-    }
 }
