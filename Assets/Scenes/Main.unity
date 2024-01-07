@@ -1099,7 +1099,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051779641}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.256, y: 2.751, z: -0.119}
+  m_LocalPosition: {x: 0.19, y: 3.28, z: -1.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1127,7 +1127,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10308, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1186,13 +1186,13 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2051779641}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 1
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  emitterVelocityMode: 1
+  emitterVelocityMode: 0
   looping: 1
   prewarm: 0
   playOnAwake: 1
@@ -1261,7 +1261,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 2
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1368,7 +1368,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 0.81798005, b: 0.033018887, a: 0.7607843}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -1430,7 +1430,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.2
+      scalar: 0.5
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -1753,7 +1753,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: -0.3
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1807,7 +1807,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 10
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1893,7 +1893,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 1.2
       mode: 0
       spread: 0
       speed:
@@ -2012,7 +2012,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 10
+      scalar: 5
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -2118,7 +2118,7 @@ ParticleSystem:
     m_BurstCount: 0
     m_Bursts: []
   SizeModule:
-    enabled: 0
+    enabled: 1
     curve:
       serializedVersion: 2
       minMaxState: 1
@@ -2128,19 +2128,19 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
-          value: 0
+          time: 0.023197174
+          value: 1
           inSlope: 0
-          outSlope: 1
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 1
-          value: 1
+          time: 0.9845276
+          value: 0
           inSlope: 1
-          outSlope: 0
+          outSlope: 1
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
@@ -2458,7 +2458,7 @@ ParticleSystem:
         key5: {r: 0, g: 0, b: 0, a: 0}
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
-        ctime0: 0
+        ctime0: 45682
         ctime1: 65535
         ctime2: 0
         ctime3: 0
@@ -3553,7 +3553,7 @@ ParticleSystem:
       m_Bits: 4294967295
     influenceList: []
   ClampVelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -4957,7 +4957,7 @@ ParticleSystem:
       properties: 0
       emitProbability: 1
   LightsModule:
-    enabled: 0
+    enabled: 1
     ratio: 0
     light: {fileID: 0}
     randomDistribution: 1
@@ -5962,7 +5962,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.194
+      value: 0.43
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5970,23 +5970,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.658
+      value: 0.499
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.35732737
+      value: -0.30348182
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5334688
+      value: -0.4694785
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.49640056
+      value: 0.53103215
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.5842215
+      value: -0.6367838
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -5994,7 +5994,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 283
+      value: 271
       objectReference: {fileID: 0}
     - target: {fileID: 8118582121510253076, guid: 8bba90af3410c304b8404585a8425650, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
