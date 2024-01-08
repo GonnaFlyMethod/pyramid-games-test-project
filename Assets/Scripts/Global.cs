@@ -10,7 +10,8 @@ namespace Global
 
         public class ChestAnimator
         {
-            public const string openChestTrigger = "isOpened";
+            public const string openChestTrigger = "isChestOpened";
+            public const string isKeyShowing = "isKeyShowing";
         }
     }
 }

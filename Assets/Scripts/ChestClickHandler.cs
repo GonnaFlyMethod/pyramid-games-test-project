@@ -2,14 +2,24 @@ using UnityEngine;
 
 public class ChestClickHandler : MonoBehaviour
 {
-    [SerializeField] private Animator _animator;
-    [SerializeField] private Animation _keyAnimation;
+    [SerializeField] private Animator _animatorChest;
+    [SerializeField] private Animator _animatorKey;
+
+    private bool _opened = false;
 
     public void HandleClick()
     {
-        if (!_animator.GetBool(Global.Constants.ChestAnimator.openChestTrigger)){
-            _animator.SetBool(Global.Constants.ChestAnimator.openChestTrigger, true);
+        if (_opened) {
+            return;
         }
+
+        DialogUI.Instance.ShowYesNoDialog("Open?", () => {
+            _opened = true;
+
+            _animatorChest.SetBool(Global.Constants.ChestAnimator.openChestTrigger, true);
+            _animatorKey.SetBool("isKeyShowing", true);
+
+        }, () => { });
     }
 
 }

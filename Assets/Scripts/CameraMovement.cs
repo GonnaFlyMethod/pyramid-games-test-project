@@ -19,6 +19,11 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (DialogUI.Instance.isPlayerInDialog())
+        {
+            return;
+        }
+
         _rawDirection.x += _currentX;
         _rawDirection.z += _currentZ;
 

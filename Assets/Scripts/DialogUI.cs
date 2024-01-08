@@ -4,6 +4,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+// TODO: Fix order. Public methods first and then implementation details (private methods)
+
 public class DialogUI : MonoBehaviour
 {
     public static DialogUI Instance { get; private set; }
@@ -11,9 +13,20 @@ public class DialogUI : MonoBehaviour
     [SerializeField] private GameObject _yesNoGO;
     [SerializeField] private GameObject _messageOnlyGO;
 
+    private bool _isPlayerInDialog;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
+    public bool isPlayerInDialog(){ return _isPlayerInDialog;}
+
     public void ShowYesNoDialog(string dialogMessage, Action yesButtonCallback, Action noButtonCallback)
     {
         _yesNoGO.SetActive(true);
+
+        _isPlayerInDialog = true; 
 
         DialogComponents dialogComponents = _yesNoGO.GetComponent<DialogComponents>();
 
@@ -27,13 +40,13 @@ public class DialogUI : MonoBehaviour
 
         yesBtn.onClick.AddListener(() =>
         {
-            _yesNoGO.SetActive(false);
+            HideDialog(_yesNoGO);
             yesButtonCallback();
         });
 
         noBtn.onClick.AddListener(() =>
         {
-            _yesNoGO.SetActive(false);
+            HideDialog(_yesNoGO);
             noButtonCallback();
         });
     }
@@ -51,8 +64,14 @@ public class DialogUI : MonoBehaviour
 
         okBtn.onClick.AddListener(() =>
         {
-            _messageOnlyGO.SetActive(false);
+            HideDialog(_messageOnlyGO);
             okCallback();
         });
+    }
+
+    private void HideDialog(GameObject dialog)
+    {
+        dialog.SetActive(false);
+        _isPlayerInDialog = false;
     }
 }

@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class KeyClickHandler : MonoBehaviour
 {
-    GameObject parentGO;
+    GameObject _keyGO;
 
     private bool keyCollected = false;
     
     // Start is called before the first frame update
     void Start()
     {
-        parentGO = transform.parent.gameObject;
+        _keyGO = transform.parent.gameObject;
     }
 
     // Update is called once per frame
@@ -20,7 +20,9 @@ public class KeyClickHandler : MonoBehaviour
 
     public void HandleClick()
     {
-        keyCollected = true;
-        parentGO.SetActive(false);
+        DialogUI.Instance.ShowYesNoDialog("Take?", () => {
+            keyCollected = true;
+            _keyGO.SetActive(false);
+        }, () => { });
     }
 }
