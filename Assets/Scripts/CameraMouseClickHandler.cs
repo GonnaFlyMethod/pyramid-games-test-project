@@ -6,8 +6,6 @@ public class CameraMouseClickHandler : MonoBehaviour
 {
     [SerializeField] private Camera _cam;
 
-    [SerializeField] private ChestClickHandler _chestClickHandler;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +42,11 @@ public class CameraMouseClickHandler : MonoBehaviour
                             KeyClickHandler keyClickHandler = go.GetComponent<KeyClickHandler>();
 
                             keyClickHandler?.HandleClick();
+                            break;
+                        case Global.Constants.Tags.exitDoor:
+                            ExitDoorClickHandler exitDoorClickHandler = go.GetComponent<ExitDoorClickHandler>();
+
+                            exitDoorClickHandler?.HandleClick();
                             break;
                     }
                 }
