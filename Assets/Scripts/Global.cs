@@ -6,6 +6,7 @@ namespace Global
         {
             public const string chest = "Chest";
             public const string key = "Key";
+            public const string exitDoor = "ExitDoor";
         }
 
         public class ChestAnimator
