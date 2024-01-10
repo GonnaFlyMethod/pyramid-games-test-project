@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6857580403301887963}
   - component: {fileID: 5275215066188804764}
   - component: {fileID: 956088442053171161}
+  - component: {fileID: 6064451705102702012}
   m_Layer: 0
   m_Name: Cauldron
   m_TagString: Untagged
@@ -98,3 +99,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 72713781330414003, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
+--- !u!114 &6064451705102702012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4302944737786620945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f066b0847ee0c478aaec4ceeec693d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objRenderer: {fileID: 5275215066188804764}
+  _colorOnHover: {r: 0.8862745, g: 0.5137255, b: 0.5137255, a: 1}

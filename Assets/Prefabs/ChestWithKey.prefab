@@ -5246,6 +5246,7 @@ GameObject:
   - component: {fileID: 2233445209844182902}
   - component: {fileID: 2233445209844182900}
   - component: {fileID: 2233445209844182903}
+  - component: {fileID: 5474280960183609914}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Chest
@@ -5319,6 +5320,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _animatorChest: {fileID: 2233445209844182900}
   _animatorKey: {fileID: 2233445210672280578}
+--- !u!114 &5474280960183609914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6844245961395120932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f066b0847ee0c478aaec4ceeec693d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objRenderers:
+  - {fileID: 2233445210445357747}
+  - {fileID: 2233445210445547811}
+  _colorOnHover: {r: 0.49411765, g: 0.83137256, b: 0.20784314, a: 1}
 --- !u!1001 &2233445209269426708
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5435,3 +5452,23 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &7873422849074725305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2233445209269394612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f066b0847ee0c478aaec4ceeec693d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objRenderers:
+  - {fileID: 2233445209271583348}
+  _colorOnHover: {r: 0.49411765, g: 0.83137256, b: 0.20784314, a: 1}
+--- !u!23 &2233445209271583348 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 5abfc2d3b5ea5d64ca95d10d1a34b677, type: 3}
+  m_PrefabInstance: {fileID: 2233445209269426708}
+  m_PrefabAsset: {fileID: 0}

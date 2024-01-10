@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4715303074342295706}
   - component: {fileID: 8787280866305870331}
   - component: {fileID: -368183188410852150}
+  - component: {fileID: 2095646077621054953}
   m_Layer: 0
   m_Name: Shelf_Framed
   m_TagString: Untagged
@@ -98,3 +99,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 9089992606673786912, guid: edcc86a903182d0429c0d7b2c727fec0, type: 3}
+--- !u!114 &2095646077621054953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157335988112527113}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f066b0847ee0c478aaec4ceeec693d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _objRenderer: {fileID: 8787280866305870331}
+  _colorOnHover: {r: 0.8862745, g: 0.5137255, b: 0.5137255, a: 1}
