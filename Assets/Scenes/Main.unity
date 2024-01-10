@@ -3519,7 +3519,7 @@ GameObject:
   - component: {fileID: 315496006}
   - component: {fileID: 315496005}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TryAgainText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4301,7 +4301,7 @@ GameObject:
   - component: {fileID: 411823552}
   - component: {fileID: 411823551}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6625,7 +6625,7 @@ GameObject:
   - component: {fileID: 682373196}
   - component: {fileID: 682373195}
   m_Layer: 5
-  m_Name: CurrentTimeTxt
+  m_Name: CurrentTimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18582,7 +18582,7 @@ GameObject:
   - component: {fileID: 1975057958}
   - component: {fileID: 1975057957}
   m_Layer: 5
-  m_Name: CurrentTimeTxt (1)
+  m_Name: BestTimeText (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19475,7 +19475,7 @@ GameObject:
   - component: {fileID: 2057738408}
   - component: {fileID: 2057738407}
   m_Layer: 5
-  m_Name: Button
+  m_Name: TryAgainButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
