@@ -16,8 +16,8 @@ public class ChestClickHandler : MonoBehaviour
         DialogUI.Instance.ShowYesNoDialog("Open?", () => {
             _opened = true;
 
-            _animatorChest.SetBool(Global.Constants.ChestAnimator.openChestTrigger, true);
-            _animatorKey.SetBool("isKeyShowing", true);
+            _animatorChest.SetBool(GlobalConstants.ChestAnimator.openChestTrigger, true);
+            _animatorKey.SetBool(GlobalConstants.ChestAnimator.isKeyShowing, true);
 
         }, () => { });
     }

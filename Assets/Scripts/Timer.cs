@@ -7,6 +7,8 @@ public class Timer : MonoBehaviour
     
     private float _elapsedTime;
 
+    public float GetElapsedTime() { return _elapsedTime; }
+
     // Update is called once per frame
     private void Update()
     {
@@ -21,3 +23,7 @@ public class Timer : MonoBehaviour
             minutes, seconds, miliseconds);
     }
 }
+
+// Global should have function - FormatElapsedSeconds
+// This function should be called in MainSceen and game over screen
+// Save user prefs as float
