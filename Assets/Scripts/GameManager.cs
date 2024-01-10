@@ -1,8 +1,6 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
 public class GameManager : MonoBehaviour
 {
