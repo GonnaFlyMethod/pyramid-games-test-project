@@ -17,17 +17,17 @@ public class MouseClickHandler : MonoBehaviour
 
                 switch (go.tag)
                 {
-                    case GlobalConstants.Tags.chest:
+                    case Global.Constants.Tags.chest:
                         ChestClickHandler clickHandler = go.GetComponent<ChestClickHandler>();
 
                         clickHandler.HandleClick();
                         break;
-                    case GlobalConstants.Tags.key:
+                    case Global.Constants.Tags.key:
                         KeyClickHandler keyClickHandler = go.GetComponent<KeyClickHandler>();
 
                         keyClickHandler.HandleClick();
                         break;
-                    case GlobalConstants.Tags.exitDoor:
+                    case Global.Constants.Tags.exitDoor:
                         ExitDoorClickHandler exitDoorClickHandler = go.GetComponent<ExitDoorClickHandler>();
 
                         exitDoorClickHandler.HandleClick();

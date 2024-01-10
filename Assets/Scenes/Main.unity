@@ -8706,7 +8706,7 @@ GameObject:
   - component: {fileID: 929080056}
   - component: {fileID: 929080055}
   m_Layer: 5
-  m_Name: TryAgainButton
+  m_Name: StartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8756,7 +8756,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.8301887, g: 0.14489143, b: 0.14489143, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.90588236, g: 0.38039216, b: 0.38039216, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -10690,7 +10690,7 @@ GameObject:
   - component: {fileID: 1110249115}
   - component: {fileID: 1110249114}
   m_Layer: 0
-  m_Name: GlobalGameManager
+  m_Name: GameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11839,7 +11839,7 @@ GameObject:
   - component: {fileID: 1227246091}
   - component: {fileID: 1227246090}
   m_Layer: 5
-  m_Name: TryAgainText
+  m_Name: StartText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19149,7 +19149,7 @@ GameObject:
   - component: {fileID: 1975057958}
   - component: {fileID: 1975057957}
   m_Layer: 5
-  m_Name: BestTimeText (1)
+  m_Name: BestTimeText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20092,7 +20092,7 @@ MonoBehaviour:
   m_Colors:
     m_NormalColor: {r: 0.83137256, g: 0.14509805, b: 0.14509805, a: 1}
     m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_PressedColor: {r: 0.9056604, g: 0.38020647, b: 0.38020647, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -20112,7 +20112,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2057738408}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1110249114}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: RestartGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2057738408
 MonoBehaviour:
   m_ObjectHideFlags: 0
