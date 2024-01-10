@@ -8,7 +8,7 @@ public class ExitDoorClickHandler : MonoBehaviour
         {
             DialogUI.Instance.ShowYesNoDialog("Open", () =>
             {
-                Debug.Log("Ending the game");
+                GameManager.Instance.GameOver();
             }, () => { });
 
             return;

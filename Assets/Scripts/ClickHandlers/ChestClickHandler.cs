@@ -17,7 +17,7 @@ public class ChestClickHandler : MonoBehaviour
             _opened = true;
 
             _animatorChest.SetBool(Global.Constants.ChestAnimator.openChestTrigger, true);
-            _animatorKey.SetBool("isKeyShowing", true);
+            _animatorKey.SetBool(Global.Constants.ChestAnimator.isKeyShowing, true);
 
         }, () => { });
     }

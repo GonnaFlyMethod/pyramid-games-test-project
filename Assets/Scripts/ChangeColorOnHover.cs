@@ -13,7 +13,6 @@ public class ChangeColorOnHover : MonoBehaviour, IPointerEnterHandler, IPointerE
     {
         _defaultColors = new List<Color>();
 
-        Debug.Log(gameObject.name);
         foreach (Renderer renderer in _objRenderers) {
             _defaultColors.Add(renderer.material.color);
         }
