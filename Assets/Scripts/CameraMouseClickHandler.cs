@@ -36,17 +36,17 @@ public class CameraMouseClickHandler : MonoBehaviour
                         case Global.Constants.Tags.chest:
                             ChestClickHandler clickHandler = go.GetComponent<ChestClickHandler>();
                             
-                            clickHandler?.HandleClick();
+                            clickHandler.HandleClick();
                             break;
                         case Global.Constants.Tags.key:
                             KeyClickHandler keyClickHandler = go.GetComponent<KeyClickHandler>();
 
-                            keyClickHandler?.HandleClick();
+                            keyClickHandler.HandleClick();
                             break;
                         case Global.Constants.Tags.exitDoor:
                             ExitDoorClickHandler exitDoorClickHandler = go.GetComponent<ExitDoorClickHandler>();
 
-                            exitDoorClickHandler?.HandleClick();
+                            exitDoorClickHandler.HandleClick();
                             break;
                     }
                 }
