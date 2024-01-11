@@ -20,7 +20,7 @@ public class MouseClickHandler : MonoBehaviour
                     case Global.Constants.Tags.chest:
                         ChestClickHandler clickHandler = go.GetComponent<ChestClickHandler>();
 
-                        clickHandler.HandleClick();
+                        //clickHandler.HandleClick();
                         break;
                     case Global.Constants.Tags.key:
                         KeyClickHandler keyClickHandler = go.GetComponent<KeyClickHandler>();
