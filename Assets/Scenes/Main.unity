@@ -10225,7 +10225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _mainMenuGo: {fileID: 154271855}
-  _timerGo: {fileID: 0}
+  _timerGo: {fileID: 1969934036}
   _gameOverGo: {fileID: 1921046190}
 --- !u!4 &1110249115
 Transform:
@@ -18607,7 +18607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1969934037
 RectTransform:
   m_ObjectHideFlags: 0
