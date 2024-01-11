@@ -15,6 +15,7 @@ public class ExitGateClickHandler : MonoBehaviour, IPointerClickHandler
             return;
         }
 
+        SFXSystem.Instance.PlayKeyRequiredSFX();
         DialogUI.Instance.ShowMessageOnlyDialog("You need a key!", () => { });
     }
 }

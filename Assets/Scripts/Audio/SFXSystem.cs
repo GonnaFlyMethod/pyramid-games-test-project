@@ -7,19 +7,14 @@ public class SFXSystem : MonoBehaviour
     public static SFXSystem Instance { get; private set; }
     
     [SerializeField] AudioSource _audioSource;
-    [SerializeField] AudioClip _buttonClickSFX;
     [SerializeField] AudioClip _chestOpenSFX;
     [SerializeField] AudioClip _keyCollectSFX;
+    [SerializeField] AudioClip _keyRequiredSFX;
     [SerializeField] AudioClip _gameOjverSFX;
    
     private void Awake()
     {
         Instance = this;
-    }
-
-    public void PlayButtonClickSFX()
-    {
-        _audioSource.PlayOneShot(_buttonClickSFX);
     }
 
     public void PlayChestOpenSFX()
@@ -30,6 +25,11 @@ public class SFXSystem : MonoBehaviour
     public void PlayKeyCollectSFX()
     {
         _audioSource.PlayOneShot(_keyCollectSFX);
+    }
+
+    public void PlayKeyRequiredSFX()
+    {
+        _audioSource.PlayOneShot(_keyRequiredSFX);
     }
 
     public void PlayGameOverSFX()

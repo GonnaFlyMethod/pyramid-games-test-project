@@ -11,6 +11,6 @@ public class KeyClickHandler : MonoBehaviour, IPointerClickHandler
             SFXSystem.Instance.PlayKeyCollectSFX();
 
             gameObject.SetActive(false);
-        }, () => {});
+        }, () => { Debug.Log("Key click");  });
     }
 }

@@ -12855,9 +12855,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1367893925}
-  _buttonClickSFX: {fileID: 8300000, guid: 8ff2a2d7e79f81c40ac447512f879374, type: 3}
   _chestOpenSFX: {fileID: 8300000, guid: 21c4a490b24ba2045bc815f7626a40ef, type: 3}
-  _keyCollectSFX: {fileID: 8300000, guid: b0e62ed71b1538648b719821f4f63b4c, type: 3}
+  _keyCollectSFX: {fileID: 8300000, guid: f11db4559b3ffff45b62e9327fc5535d, type: 3}
+  _keyRequiredSFX: {fileID: 8300000, guid: 1ed8fb76fc64e4e46847348138782234, type: 3}
   _gameOjverSFX: {fileID: 8300000, guid: 8c215d1ab1c95f04eafc33a08e1229f7, type: 3}
 --- !u!82 &1367893925
 AudioSource:
@@ -16681,7 +16681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1766378028}
   _volumeIncreaseSpeed: 0.3
-  _maxVolume: 0.7
+  _maxVolume: 0.4
 --- !u!1001 &1779112961
 PrefabInstance:
   m_ObjectHideFlags: 0

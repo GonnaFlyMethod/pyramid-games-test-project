@@ -4,7 +4,7 @@ public class VolumeController : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private float _volumeIncreaseSpeed;
-    [SerializeField, Range(0.5f, 1)] private float _maxVolume;
+    [SerializeField, Range(0.1f, 1)] private float _maxVolume;
 
     private float _volumedefault;
     private void Start()
@@ -27,7 +27,7 @@ public class VolumeController : MonoBehaviour
                 audioSourceCurrentVolume, _maxVolume, _volumeIncreaseSpeed * Time.deltaTime);
         }
 
-        if (1.0 - _audioSource.volume < 0.01)
+        if (_maxVolume - _audioSource.volume < 0.01)
         {
             _audioSource.volume = _maxVolume;
         }

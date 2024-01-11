@@ -68,7 +68,6 @@ public class DialogUI : MonoBehaviour
 
         noBtn.onClick.AddListener(() =>
         {
-            noBtn.onClick.RemoveAllListeners();
             HideDialog(_yesNoGO);
             noButtonCallback();
         });
