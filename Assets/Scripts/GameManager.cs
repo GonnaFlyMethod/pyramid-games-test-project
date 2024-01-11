@@ -58,6 +58,7 @@ public class GameManager : MonoBehaviour
         _timerGo.SetActive(false);
 
         MusicSystem.Instance.StopPlayer();
+        SFXSystem.Instance.PlayGameOverSFX();
 
         float currentTime = _timerGo.GetComponent<Timer>().GetElapsedTime();
         string currentTimeFormatted = Global.Funcs.FormatSeconds(currentTime);

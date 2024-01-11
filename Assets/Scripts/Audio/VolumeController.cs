@@ -4,6 +4,7 @@ public class VolumeController : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private float _volumeIncreaseSpeed;
+    [SerializeField, Range(0.1f, 1)] private float _maxVolume;
 
     private float _volumedefault;
     private void Start()
@@ -20,15 +21,15 @@ public class VolumeController : MonoBehaviour
 
         float audioSourceCurrentVolume = _audioSource.volume;
         
-        if (audioSourceCurrentVolume != 1)
+        if (audioSourceCurrentVolume != _maxVolume)
         {
             _audioSource.volume = Mathf.Lerp(
-                audioSourceCurrentVolume, 1, _volumeIncreaseSpeed * Time.deltaTime);
+                audioSourceCurrentVolume, _maxVolume, _volumeIncreaseSpeed * Time.deltaTime);
         }
 
-        if (1.0 - _audioSource.volume < 0.01)
+        if (_maxVolume - _audioSource.volume < 0.01)
         {
-            _audioSource.volume = 1;
+            _audioSource.volume = _maxVolume;
         }
     }
 }
