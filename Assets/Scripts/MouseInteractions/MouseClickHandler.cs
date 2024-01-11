@@ -23,14 +23,14 @@ public class MouseClickHandler : MonoBehaviour
                         //clickHandler.HandleClick();
                         break;
                     case Global.Constants.Tags.key:
-                        KeyClickHandler keyClickHandler = go.GetComponent<KeyClickHandler>();
+                        //KeyClickHandler2 keyClickHandler = go.GetComponent<KeyClickHandler2>();
 
-                        keyClickHandler.HandleClick();
-                        break;
+                        //keyClickHandler.HandleClick();
+                        //break;
                     case Global.Constants.Tags.exitDoor:
-                        ExitDoorClickHandler exitDoorClickHandler = go.GetComponent<ExitDoorClickHandler>();
+                        //ExitDoorClickHandler1 exitDoorClickHandler = go.GetComponent<ExitDoorClickHandler1>();
 
-                        exitDoorClickHandler.HandleClick();
+                        //exitDoorClickHandler.HandleClick();
                         break;
                 }
             }

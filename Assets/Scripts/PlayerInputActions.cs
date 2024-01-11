@@ -28,33 +28,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""id"": ""95ec1dee-a0bc-4953-87cf-7f23a1bb3c17"",
             ""actions"": [
                 {
-                    ""name"": ""RotateCameraLeft"",
-                    ""type"": ""Button"",
-                    ""id"": ""cad9a00a-1da8-479a-8b90-c11f7e895b5b"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
-                    ""name"": ""RotateCameraRight"",
-                    ""type"": ""Button"",
-                    ""id"": ""59f9028c-655c-42ae-88cf-4ea35d78b10f"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": true
-                },
-                {
-                    ""name"": ""MouseLeftClick"",
-                    ""type"": ""Button"",
-                    ""id"": ""d3f13480-3668-4800-be3b-a7458242de30"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Movement"",
                     ""type"": ""PassThrough"",
                     ""id"": ""372ab4e4-6b75-4481-8992-ee1871b5c81c"",
@@ -74,39 +47,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""59dea672-9e3e-4ce5-a8ac-a241d4be2184"",
-                    ""path"": ""<Keyboard>/q"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""RotateCameraLeft"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""aa16f940-a37b-4cc4-b9d8-7dc382d2f410"",
-                    ""path"": ""<Keyboard>/e"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""RotateCameraRight"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""cd83583d-e4c6-4c52-97e8-d9f4087eee97"",
-                    ""path"": ""<Mouse>/leftButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MouseLeftClick"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
                 {
                     ""name"": ""WASD"",
                     ""id"": ""fc8a1050-862f-4b1d-b665-528d252a9c4a"",
@@ -202,9 +142,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_RotateCameraLeft = m_Player.FindAction("RotateCameraLeft", throwIfNotFound: true);
-        m_Player_RotateCameraRight = m_Player.FindAction("RotateCameraRight", throwIfNotFound: true);
-        m_Player_MouseLeftClick = m_Player.FindAction("MouseLeftClick", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Rotation = m_Player.FindAction("Rotation", throwIfNotFound: true);
     }
@@ -268,18 +205,12 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_RotateCameraLeft;
-    private readonly InputAction m_Player_RotateCameraRight;
-    private readonly InputAction m_Player_MouseLeftClick;
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Rotation;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @RotateCameraLeft => m_Wrapper.m_Player_RotateCameraLeft;
-        public InputAction @RotateCameraRight => m_Wrapper.m_Player_RotateCameraRight;
-        public InputAction @MouseLeftClick => m_Wrapper.m_Player_MouseLeftClick;
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Rotation => m_Wrapper.m_Player_Rotation;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
@@ -291,15 +222,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @RotateCameraLeft.started += instance.OnRotateCameraLeft;
-            @RotateCameraLeft.performed += instance.OnRotateCameraLeft;
-            @RotateCameraLeft.canceled += instance.OnRotateCameraLeft;
-            @RotateCameraRight.started += instance.OnRotateCameraRight;
-            @RotateCameraRight.performed += instance.OnRotateCameraRight;
-            @RotateCameraRight.canceled += instance.OnRotateCameraRight;
-            @MouseLeftClick.started += instance.OnMouseLeftClick;
-            @MouseLeftClick.performed += instance.OnMouseLeftClick;
-            @MouseLeftClick.canceled += instance.OnMouseLeftClick;
             @Movement.started += instance.OnMovement;
             @Movement.performed += instance.OnMovement;
             @Movement.canceled += instance.OnMovement;
@@ -310,15 +232,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @RotateCameraLeft.started -= instance.OnRotateCameraLeft;
-            @RotateCameraLeft.performed -= instance.OnRotateCameraLeft;
-            @RotateCameraLeft.canceled -= instance.OnRotateCameraLeft;
-            @RotateCameraRight.started -= instance.OnRotateCameraRight;
-            @RotateCameraRight.performed -= instance.OnRotateCameraRight;
-            @RotateCameraRight.canceled -= instance.OnRotateCameraRight;
-            @MouseLeftClick.started -= instance.OnMouseLeftClick;
-            @MouseLeftClick.performed -= instance.OnMouseLeftClick;
-            @MouseLeftClick.canceled -= instance.OnMouseLeftClick;
             @Movement.started -= instance.OnMovement;
             @Movement.performed -= instance.OnMovement;
             @Movement.canceled -= instance.OnMovement;
@@ -344,9 +257,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public PlayerActions @Player => new PlayerActions(this);
     public interface IPlayerActions
     {
-        void OnRotateCameraLeft(InputAction.CallbackContext context);
-        void OnRotateCameraRight(InputAction.CallbackContext context);
-        void OnMouseLeftClick(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
         void OnRotation(InputAction.CallbackContext context);
     }

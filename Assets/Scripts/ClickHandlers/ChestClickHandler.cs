@@ -8,7 +8,7 @@ public class ChestClickHandler : MonoBehaviour, IPointerClickHandler
 
     private bool _opened = false;
 
-    public void OnPointerClick(PointerEventData eventData)
+    public void OnPointerClick(PointerEventData _)
     {
         if (_opened)
         {

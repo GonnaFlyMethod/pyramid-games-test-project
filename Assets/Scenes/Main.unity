@@ -14166,54 +14166,6 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 476126526}
-        m_TargetAssemblyTypeName: CameraRotation, Assembly-CSharp
-        m_MethodName: RotateCameraLeft
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: cad9a00a-1da8-479a-8b90-c11f7e895b5b
-    m_ActionName: Player/RotateCameraLeft[/Keyboard/q]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 476126526}
-        m_TargetAssemblyTypeName: CameraRotation, Assembly-CSharp
-        m_MethodName: RotateCameraRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 59f9028c-655c-42ae-88cf-4ea35d78b10f
-    m_ActionName: Player/New action
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1389621478}
-        m_TargetAssemblyTypeName: MouseClickHandler, Assembly-CSharp
-        m_MethodName: Clicked
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d3f13480-3668-4800-be3b-a7458242de30
-    m_ActionName: Player/MouseLeftClick[/Mouse/leftButton]
-  - m_PersistentCalls:
       m_Calls: []
     m_ActionId: 372ab4e4-6b75-4481-8992-ee1871b5c81c
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
