@@ -7,7 +7,7 @@ public class ExitGateClickHandler : MonoBehaviour, IPointerClickHandler
     {
         if (InventorySystem.Instance.IsKeyCollected())
         {
-            DialogUI.Instance.ShowYesNoDialog("Open", () =>
+            DialogUI.Instance.ShowYesNoDialog("Open?", () =>
             {
                 GameManager.Instance.GameOver();
             }, () => { });
