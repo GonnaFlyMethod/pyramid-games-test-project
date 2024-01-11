@@ -1,13 +1,23 @@
 using UnityEngine;
 
-public class SmoothVolumeIncreaser : MonoBehaviour
+public class VolumeController : MonoBehaviour
 {
     [SerializeField] private AudioSource _audioSource;
     [SerializeField] private float _volumeIncreaseSpeed;
 
-    // Update is called once per frame
+    private float _volumedefault;
+    private void Start()
+    {
+        _volumedefault = _audioSource.volume;
+    }
+
     private void Update()
     {
+        if (Time.timeScale == 0)
+        {
+            _audioSource.volume = _volumedefault;
+        }
+
         float audioSourceCurrentVolume = _audioSource.volume;
         
         if (audioSourceCurrentVolume != 1)
