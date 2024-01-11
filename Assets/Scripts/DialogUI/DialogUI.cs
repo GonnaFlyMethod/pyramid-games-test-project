@@ -18,6 +18,31 @@ public class DialogUI : MonoBehaviour
         Instance = this;
     }
 
+    private void Update()
+    {
+        Button yesButton, noButton;
+        getButtons(out yesButton, out noButton);
+
+        if (!yesButton.IsActive())
+        {
+            yesButton.onClick.RemoveAllListeners();
+        }
+
+        if (!noButton.IsActive())
+        {
+            noButton.onClick.RemoveAllListeners();
+        }
+    }
+
+    private void getButtons(out Button yesBtn, out Button noBtn)
+    {
+        DialogComponents dialogComponents = _yesNoGO.GetComponent<DialogComponents>();
+        List<Button> buttons = dialogComponents.GetButtons();
+
+        yesBtn = buttons[0];
+        noBtn = buttons[1];
+    }
+
     public bool isPlayerInDialog(){ return _isPlayerInDialog;}
 
     public void ShowYesNoDialog(string dialogMessage, Action yesButtonCallback, Action noButtonCallback)
@@ -31,10 +56,8 @@ public class DialogUI : MonoBehaviour
         TextMeshProUGUI txtMeshPro = dialogComponents.GetTxtMeshPro();
         txtMeshPro.text = dialogMessage;
 
-        List<Button> buttons = dialogComponents.GetButtons();
-
-        Button yesBtn = buttons[0];
-        Button noBtn = buttons[1];
+        Button yesBtn, noBtn;
+        getButtons(out yesBtn, out noBtn);
 
         yesBtn.onClick.AddListener(() =>
         {
@@ -42,8 +65,10 @@ public class DialogUI : MonoBehaviour
             yesButtonCallback();
         });
 
+
         noBtn.onClick.AddListener(() =>
         {
+            noBtn.onClick.RemoveAllListeners();
             HideDialog(_yesNoGO);
             noButtonCallback();
         });

@@ -9,3 +9,4 @@
 6) Stylized Hand Painted Dungeon (Free) (Vendor: L2S ARTS);
 7) Lite Dungeon Pack - Low Poly 3D (Vendor: Gridness Studio);
 8) Energy Hard Rock Music Pack (Vendor: Energy Hard Rock Music Pack);
+9) Free music and SFX collection (Vendor: Alchemy Studio Music);
