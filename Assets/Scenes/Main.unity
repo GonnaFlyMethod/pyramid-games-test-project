@@ -16552,10 +16552,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSource: {fileID: 1766378028}
   _poolOfCompositions:
-  - {fileID: 8300000, guid: 348f348f09d8232458ab90cba007ac47, type: 3}
-  - {fileID: 8300000, guid: d834f911df34546479ebc7869f054019, type: 3}
-  - {fileID: 8300000, guid: aedab1b3fab682a469fbe6076e799b2f, type: 3}
-  - {fileID: 8300000, guid: 41fbd855e439de649b07f9df3d21714c, type: 3}
+  - {fileID: 8300000, guid: 63edaa76548471e49862a791b576af16, type: 3}
+  - {fileID: 8300000, guid: 944130361de5ff044878a6f525321f86, type: 3}
+  - {fileID: 8300000, guid: 338658286530aa54d92eedee21b5c9d1, type: 3}
+  - {fileID: 8300000, guid: 24b4f70f5511b614c849738a19c26642, type: 3}
 --- !u!82 &1766378028
 AudioSource:
   m_ObjectHideFlags: 0
