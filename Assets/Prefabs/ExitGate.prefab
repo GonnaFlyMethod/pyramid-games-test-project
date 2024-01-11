@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3406951155480357154}
-  - component: {fileID: 6879405666571749250}
   - component: {fileID: 812826404177401385}
   - component: {fileID: 6549809622286535543}
+  - component: {fileID: 4290890915871004227}
   m_Layer: 0
   m_Name: ExitGate
   m_TagString: ExitDoor
@@ -40,18 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6879405666571749250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3716321759309318509}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96573ef2891de104581c4a0c3d697c50, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &812826404177401385
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -83,6 +71,18 @@ MonoBehaviour:
   - {fileID: 7452170915616757237}
   - {fileID: 669613062791736244}
   _colorOnHover: {r: 0.49411765, g: 0.83137256, b: 0.20784314, a: 1}
+--- !u!114 &4290890915871004227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3716321759309318509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ddfcaeba9630cc479025d2834c43776, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4155582702955580025
 GameObject:
   m_ObjectHideFlags: 0

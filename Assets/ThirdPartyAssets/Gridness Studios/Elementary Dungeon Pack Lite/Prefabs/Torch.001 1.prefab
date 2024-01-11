@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 978898596663402684}
   - component: {fileID: 8444298844198479039}
   m_Layer: 0
-  m_Name: Torch.001
+  m_Name: Torch.001 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -218,8 +218,16 @@ PrefabInstance:
       value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 6343718281775055618, guid: 4daecac5922e4cf46914efecc3de4129, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343718281775055618, guid: 4daecac5922e4cf46914efecc3de4129, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6343718281775055618, guid: 4daecac5922e4cf46914efecc3de4129, type: 3}
       propertyPath: InitialModule.startLifetime.minScalar
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6343718281775055618, guid: 4daecac5922e4cf46914efecc3de4129, type: 3}
       propertyPath: ColorModule.gradient.maxGradient.ctime1

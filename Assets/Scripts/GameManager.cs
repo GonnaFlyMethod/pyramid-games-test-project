@@ -1,8 +1,6 @@
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using static UnityEngine.InputSystem.LowLevel.InputStateHistory;
 
 public class GameManager : MonoBehaviour
 {
@@ -14,8 +12,6 @@ public class GameManager : MonoBehaviour
 
     private static bool isRestartGame = false;
 
-
-    // Start is called before the first frame update
     private void Awake()
     {
         Instance = this;
@@ -25,8 +21,8 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-
-        GameObject bestTimeText = _mainMenuGo.transform.Find("BestTimeText").gameObject;
+        GameObject bestTimeText = _mainMenuGo.transform
+            .Find(Global.Constants.ObjectNames.bestTimeTxt).gameObject;
             
         float bestTime = PlayerPrefs.GetFloat(Global.Constants.PlayerPrefs.bestTime);
 
@@ -39,7 +35,7 @@ public class GameManager : MonoBehaviour
             TextMeshProUGUI txtMeshPro = bestTimeText.GetComponent<TextMeshProUGUI>();
             string bestTimeFormatted = Global.Funcs.FormatSeconds(bestTime); 
 
-            txtMeshPro.text = "Best time: " + bestTimeFormatted;
+            txtMeshPro.text = Global.Constants.StringTemapltes.bestTime + bestTimeFormatted;
         }
 
         Time.timeScale = 0;
@@ -62,8 +58,12 @@ public class GameManager : MonoBehaviour
         float currentTime = _timerGo.GetComponent<Timer>().GetElapsedTime();
         string currentTimeFormatted = Global.Funcs.FormatSeconds(currentTime);
 
-        _gameOverGo.transform.Find("CurrentTimeText")
-            .GetComponent<TextMeshProUGUI>().text = "Current time: " + currentTimeFormatted;
+        // Finding "current time text" within game over object
+        GameObject currentTimeGO = _gameOverGo.transform
+            .Find(Global.Constants.ObjectNames.currentTimeTxt).gameObject;
+
+        string currentTimePresentation = Global.Constants.StringTemapltes.currentTime + currentTimeFormatted;
+        currentTimeGO.GetComponent<TextMeshProUGUI>().text = currentTimePresentation;
 
         float bestTime = PlayerPrefs.GetFloat(Global.Constants.PlayerPrefs.bestTime);
         string bestTimeFormatted;
@@ -77,11 +77,12 @@ public class GameManager : MonoBehaviour
         {
             bestTimeFormatted = Global.Funcs.FormatSeconds(bestTime);
         }
-        
 
-        _gameOverGo.transform.Find("BestTimeText")
-            .GetComponent<TextMeshProUGUI>().text = "Best time: " + bestTimeFormatted;
+        GameObject bestTimeGO = _gameOverGo.transform
+            .Find(Global.Constants.ObjectNames.bestTimeTxt).gameObject;
 
+        string bestTimePresentation = Global.Constants.StringTemapltes.bestTime + bestTimeFormatted;
+        bestTimeGO.GetComponent<TextMeshProUGUI>().text = bestTimePresentation;
 
         Time.timeScale = 0;
     }

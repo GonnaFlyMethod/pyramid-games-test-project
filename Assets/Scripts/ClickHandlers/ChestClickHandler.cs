@@ -1,15 +1,17 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ChestClickHandler : MonoBehaviour
+public class ChestClickHandler : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] private Animator _animatorChest;
     [SerializeField] private Animator _animatorKey;
 
     private bool _opened = false;
 
-    public void HandleClick()
+    public void OnPointerClick(PointerEventData _)
     {
-        if (_opened) {
+        if (_opened)
+        {
             return;
         }
 
@@ -21,5 +23,4 @@ public class ChestClickHandler : MonoBehaviour
 
         }, () => { });
     }
-
 }

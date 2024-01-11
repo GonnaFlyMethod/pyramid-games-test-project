@@ -1,12 +1,13 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ExitDoorClickHandler : MonoBehaviour
+public class ExitGateClickHandler : MonoBehaviour, IPointerClickHandler
 {
-    public void HandleClick()
+    public void OnPointerClick(PointerEventData _)
     {
         if (InventorySystem.Instance.IsKeyCollected())
         {
-            DialogUI.Instance.ShowYesNoDialog("Open", () =>
+            DialogUI.Instance.ShowYesNoDialog("Open?", () =>
             {
                 GameManager.Instance.GameOver();
             }, () => { });
