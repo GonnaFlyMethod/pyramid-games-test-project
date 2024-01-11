@@ -4,8 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// TODO: Fix order. Public methods first and then implementation details (private methods)
-
 public class DialogUI : MonoBehaviour
 {
     public static DialogUI Instance { get; private set; }

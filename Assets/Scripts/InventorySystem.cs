@@ -6,8 +6,7 @@ public class InventorySystem : MonoBehaviour
     
     private bool _isKeyCollected = false;
 
-    // Start is called before the first frame update
-    void Awake()
+    private void Awake()
     {
         Instance = this;
     }
