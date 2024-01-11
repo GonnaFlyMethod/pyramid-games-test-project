@@ -47,6 +47,8 @@ public class GameManager : MonoBehaviour
         _mainMenuGo.SetActive(false);
         _timerGo.SetActive(true);
 
+        MusicSystem.Instance.PickAndPlayRandomMusic();
+
         Time.timeScale = 1;
     }
 
@@ -54,6 +56,8 @@ public class GameManager : MonoBehaviour
     {
         _gameOverGo.SetActive(true);
         _timerGo.SetActive(false);
+
+        MusicSystem.Instance.StopPlayer();
 
         float currentTime = _timerGo.GetComponent<Timer>().GetElapsedTime();
         string currentTimeFormatted = Global.Funcs.FormatSeconds(currentTime);
