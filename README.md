@@ -10,3 +10,4 @@
 7) Lite Dungeon Pack - Low Poly 3D (Vendor: Gridness Studio);
 8) Energy Hard Rock Music Pack (Vendor: Energy Hard Rock Music Pack);
 9) Free music and SFX collection (Vendor: Alchemy Studio Music);
+10) RPG Essentials Sound Effects (Vendor: leohpaz);
