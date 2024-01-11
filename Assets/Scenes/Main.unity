@@ -4827,9 +4827,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 1
   m_FollowOffset: {x: 0, y: 16, z: -14}
-  m_XDamping: 0.1
-  m_YDamping: 0.1
-  m_ZDamping: 0.1
+  m_XDamping: 0
+  m_YDamping: 0
+  m_ZDamping: 0
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -14116,9 +14116,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1519230207}
+  - component: {fileID: 1519230209}
   - component: {fileID: 1519230208}
   m_Layer: 0
-  m_Name: PlayerInputHandler
+  m_Name: InputSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14216,11 +14217,27 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: 372ab4e4-6b75-4481-8992-ee1871b5c81c
     m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 370244d4-d5b5-49f0-8d9b-235b6467b94d
+    m_ActionName: Player/Rotation[/Keyboard/e,/Keyboard/q]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &1519230209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1519230206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4bf1af47c3915b4a9f4730fe9272f27, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1520006060
 PrefabInstance:
   m_ObjectHideFlags: 0
